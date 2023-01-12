@@ -1,0 +1,51 @@
+cd into working dir
+
+
+// initialization
+pip install Django
+django-admin startproject mysite
+cd mysite
+python -m venv env
+cd env/Scripts
+activate
+python manage.py startapp appname
+type nul > .gitignore
+paste in gitignore
+
+
+
+// new project
+git init
+git add .
+git commit -m "commit msg"
+git remote add origin https://github.com/Serenity0204/Project-Name.git
+git branch -M main
+git push -u origin main
+or 
+git push -f origin main
+
+	
+// generate requirements.txt
+pip install pipreqs
+pipreqs /path/to/project
+
+
+// django commands
+django command:
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
+
+
+Design flow:
+	create model
+	add it in settings.py
+	add the model in admin panel (admin.py)
+	
+
+
+
+
+
