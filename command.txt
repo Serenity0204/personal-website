@@ -1,13 +1,24 @@
+git clone user@git-server:project_name.git -b branch_name --single-branch
+example:
+git clone https://github.com/Serenity0204/CPP_Template.git -b example --single-branch
+git clone https://github.com/Serenity0204/Graphing_Calculator_SFML.git -b test --single-branch
+cd into working dir
+
 cd into working dir
 
 
-// initialization
+// initialization every time clone
 pip install Django
+
 django-admin startproject mysite
 cd mysite
+
+// everytime clone
 python -m venv env
 cd env/Scripts
 activate
+
+
 python manage.py startapp appname
 type nul > .gitignore
 paste in gitignore
@@ -28,7 +39,7 @@ git push -f origin main
 // generate requirements.txt
 pip install pipreqs
 pipreqs /path/to/project
-
+pip install -r requirements.txt
 
 // django commands
 django command:
