@@ -8,4 +8,4 @@ class Project(models.Model):
     detail = models.TextField()
     github_link = models.CharField(max_length=500)
     tech_stack = models.TextField()
-    image = models.FilePathField(path='/img')
+    #image = models.FilePathField(path="/img")

@@ -43,6 +43,7 @@ pip install -r requirements.txt
 
 // django commands
 django command:
+python manage.py shell
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
