@@ -5,5 +5,7 @@ from portfolio.models import Project
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name', 'detail',)
-    list_filter = ('status',)
+    list_filter = ('status','created', 'publish')
     search_fields = ('name',)
+    prepopulated_fields = {'slug': ('name', )}
+    
