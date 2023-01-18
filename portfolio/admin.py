@@ -4,5 +4,6 @@ from portfolio.models import Project
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'detail', 'github_link', 'tech_stack')
-    
+    list_display = ('name', 'detail',)
+    list_filter = ('status',)
+    search_fields = ('name',)
