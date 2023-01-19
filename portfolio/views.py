@@ -10,8 +10,8 @@ def project_list(request):
     return render(request, 'project_list.html', context)
 
 # detail
-def project_detail(request, pk):
-    project = get_object_or_404(Project, pk=pk, status='published')
+def project_detail(request, project_name):
+    project = get_object_or_404(Project, slug=project_name, status='published')
     context = {'project':project}
     return render(request, 'project_detail.html', context)
 

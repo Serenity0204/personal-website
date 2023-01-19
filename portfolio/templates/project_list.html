@@ -5,6 +5,7 @@
 
 {% block main %}
 
+<h1><p class="text-center">Lin's Portfolio</p></h1>
 {% for project in projects%}
 
 <div class="col d-flex justify-content-center">
@@ -13,11 +14,11 @@
                 <!--post title-->
                 <h5 class="card-title">{{project.name}}</h5>
                 <!--post content preview-->
-                <p class="card-text">{{post.detail|truncatewords:45|linebreaks}}</p>
+                <p class="card-text">{{project.detail|truncatewords:45|linebreaks}}</p>
                 <!--direct link to post content-->
                 <a href="{{ project.github_link }}" class="btn btn-primary">View More</a>
                 <!--post date-->
-                <p class="card-title"> This post was published on {{ post.publish }}</p>
+                <p class="card-title"> This post was published on {{ project.publish }}</p>
         </div>
     </div>
 </div>
