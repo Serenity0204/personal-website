@@ -1,7 +1,26 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block title %}Lin's Portfolio{% endblock %}
+
 {% block main %}
 
+{% for project in projects%}
 
+<div class="col d-flex justify-content-center">
+    <div class="card" style="width: 60rem;">
+        <div class="card-body">
+                <!--post title-->
+                <h5 class="card-title">{{project.name}}</h5>
+                <!--post content preview-->
+                <p class="card-text">{{post.detail|truncatewords:45|linebreaks}}</p>
+                <!--direct link to post content-->
+                <a href="{{ project.github_link }}" class="btn btn-primary">View More</a>
+                <!--post date-->
+                <p class="card-title"> This post was published on {{ post.publish }}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}
 
